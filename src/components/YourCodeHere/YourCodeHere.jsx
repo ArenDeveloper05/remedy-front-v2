@@ -14,7 +14,7 @@ export function YourCodeHere(){
   return (
     <UserContainer>
 
-      <div className='Report__Background Global__app-content-max-width'>
+      <div className='Report__Background '>
         <div className='Report__Modal'>
 
 
@@ -62,6 +62,22 @@ export function YourCodeHere(){
                         <p><span>Report Title</span> <span>12</span></p>
                         <input className="UIInput" type="text" placeholder="Placeholder..."/>
                         <p>Please enter your report title</p>
+                    </div>
+
+                    <div className='Report__Modal-container__Main-fields-field  Report__content__field  Field__error '>
+                        <p><span>Report Content</span> <span>15,000</span></p>
+                        <div className='Report__Content__Area'>
+
+                          <div className='Report__Content__Area__Header'>
+
+                          </div>
+                          <div className='Report__Content__Area__Content'>
+
+                          </div>
+
+
+                        </div>
+                        <p>You have reached the character limit</p>
                     </div>
 
                 </div>
