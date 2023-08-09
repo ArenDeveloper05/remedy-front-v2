@@ -5,9 +5,9 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "./bin/dev.sh",
-    "build": "./bin/build.sh",
-    "deploy": "./bin/deploy.sh",
+    "start": "bash bin/dev.sh",
+    "build": "bash bin/build.sh",
+    "deploy": "bash bin/deploy.sh",
     "relay": "relay-compiler"
   },
   "browserslist": [

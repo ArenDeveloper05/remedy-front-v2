@@ -2,13 +2,82 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { UserContainer } from '../User/UserContainer.jsx';
 import './YourCodeHere.scss';
+//Icons
+import modalCloseIcon from "../../assets/images/icon-close.svg"
+import OP_LOGO from "../../assets/images/img-op.svg"
+import { UIDropdown } from '../UI/UIDropdown.jsx';
+
+
 
 export function YourCodeHere(){
 
   return (
     <UserContainer>
 
+      <div className='Report__Background Global__app-content-max-width'>
+        <div className='Report__Modal'>
 
+
+          <div className='Report__Modal-container'>
+            <div className='Report__Modal-container__Header'>
+                <p>Report submission</p>
+                <div className='Report__Modal-container__Header-content'>
+
+                    <div className='Report__Modal-container__Header-content__Description'>
+                        <div className='Logo'>
+                          <img src={OP_LOGO} alt="logo" />
+                        </div>
+
+                        <div className='Info'>
+                          <h4>Optimism</h4>
+                          <p>An open stack builders can create social</p>
+                          <p><span>Type</span> Smart Contract</p>
+                        </div>
+                    </div>
+
+                    <div className='Report__Modal-container__Header-content__Buttons'>
+                      <button className="UIButton UIButton--green-outline">Save as draft</button>
+                      <button className="UIButton UIButton--green">Submit Report</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div className='Report__Modal-container__Main'>
+                <div className='Report__Modal-container__Main-fields'>
+
+                    <div className='Report__Modal-container__Main-fields-field'>
+                        <p>Asset</p>
+                        <UIDropdown className="my-custom-class" title="Select assets in scope" items={[ {title: "Item 1"}, {title: "Item 2"} ]}></UIDropdown>
+                    </div>
+
+                    <div className='Report__Modal-container__Main-fields-field Field__error'>
+                        <p>Severity</p>
+                        <UIDropdown className="my-custom-class" title="Select Severity" items={[ {title: "Item 1"}, {title: "Item 2"} ]}></UIDropdown>
+                        <p>Please select a sevrity of the potential vulnerability</p>
+                    </div>
+
+                    <div className='Report__Modal-container__Main-fields-field Report__title__input Field__error'>
+                        <p><span>Report Title</span> <span>12</span></p>
+                        <input className="UIInput" type="text" placeholder="Placeholder..."/>
+                        <p>Please enter your report title</p>
+                    </div>
+
+                </div>
+            </div>
+
+          </div>
+
+
+          <div className='Report__Modal-close'>
+            <div className='Report__Modal-close-img'>
+              <img src={modalCloseIcon} alt="modalCloseIcon" />
+            </div>
+          </div>
+
+        </div>
+      </div>
 
 
 
