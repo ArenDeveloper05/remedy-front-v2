@@ -5,6 +5,7 @@ import './YourCodeHere.scss';
 //Icons
 import modalCloseIcon from "../../assets/images/icon-close.svg"
 import OP_LOGO from "../../assets/images/img-op.svg"
+import Add_Url_Icon from "../../assets/images/icon-add-url.svg"
 import { UIDropdown } from '../UI/UIDropdown.jsx';
 
 
@@ -52,23 +53,37 @@ export function YourCodeHere(){
                         <UIDropdown className="my-custom-class" title="Select assets in scope" items={[ {title: "Item 1"}, {title: "Item 2"} ]}></UIDropdown>
                     </div>
 
-                    <div className='Report__Modal-container__Main-fields-field Field__error'>
+                    <div className='Report__Modal-container__Main-fields-field     Field__error'>
                         <p>Severity</p>
                         <UIDropdown className="my-custom-class" title="Select Severity" items={[ {title: "Item 1"}, {title: "Item 2"} ]}></UIDropdown>
                         <p>Please select a sevrity of the potential vulnerability</p>
                     </div>
 
-                    <div className='Report__Modal-container__Main-fields-field Report__title__input Field__error'>
+                    <div className='Report__Modal-container__Main-fields-field    Report__title__input     Field__error'>
                         <p><span>Report Title</span> <span>12</span></p>
                         <input className="UIInput" type="text" placeholder="Placeholder..."/>
                         <p>Please enter your report title</p>
                     </div>
 
-                    <div className='Report__Modal-container__Main-fields-field  Report__content__field  Field__error '>
+                    <div className='Report__Modal-container__Main-fields-field     Report__content__field      Field__error '>
                         <p><span>Report Content</span> <span>15,000</span></p>
                         <div className='Report__Content__Area'>
 
                           <div className='Report__Content__Area__Header'>
+
+                              <div className='Report__Content__Area__Header-modes'>
+                                <div className='Report__Content__Area__Header-modes-mode    Active--Markdown--Mode'>
+                                  <span>Write</span>
+                                </div>
+                                <div className='Report__Content__Area__Header-modes-mode '>
+                                  <span>Preview</span>
+                                </div>
+                              </div>
+
+                              
+                              <div className='Report__Content__Area__Header-info'>
+                                <span>How to use markdown</span>
+                              </div>
 
                           </div>
                           <div className='Report__Content__Area__Content'>
@@ -79,6 +94,36 @@ export function YourCodeHere(){
                         </div>
                         <p>You have reached the character limit</p>
                     </div>
+
+                    <div className='Report__Modal-container__Main-fields-field Additional-links '>
+                      <div className='Additional-links__Title'>
+                          <p>Additional links <span>(optional)</span></p>
+                      </div>
+
+                      <div className='Additional-links__Box'>
+                          <div className='Additional-links__Box-item'>
+                              <input className="UIInput" type="text" placeholder="http://         Enter an additional link" />
+                          </div>
+                          <div className='Additional-links__Box-item    Additional--Link--Error'>
+                              <input className="UIInput" type="text" placeholder="http://         Enter an additional link"/>
+                              <p className='Additional--Link--Error--message'>Please enter a valid URL</p>
+                          </div>
+                          <div className='Additional-links__Box-item'>
+                              <input className="UIInput" type="text" placeholder="http://         Enter an additional link"/>
+                          </div>
+                          <div className='Additional-links__Box-item'>
+                              <input className="UIInput" type="text" placeholder="http://         Enter an additional link"/>
+                              
+                          </div>
+
+                      </div>
+
+                      <div className='Additional-links__AddUrl'>
+                        <img src={Add_Url_Icon} alt="add-url-icon" />
+                        <span>Add another URL</span>
+                      </div>
+
+                    </div> 
 
                 </div>
             </div>
