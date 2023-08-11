@@ -6,6 +6,8 @@ import './YourCodeHere.scss';
 import modalCloseIcon from "../../assets/images/icon-close.svg"
 import OP_LOGO from "../../assets/images/img-op.svg"
 import Add_Url_Icon from "../../assets/images/icon-add-url.svg"
+import Choose_File_Icon from "../../assets/images/icon-choose-file.svg"
+import Icon__File from "../../assets/images/icon-file.svg"
 import { UIDropdown } from '../UI/UIDropdown.jsx';
 
 
@@ -31,7 +33,7 @@ export function YourCodeHere(){
 
                         <div className='Info'>
                           <h4>Optimism</h4>
-                          <p>An open stack builders can create social</p>
+                          <div className='Info-desc'><p>An open stack builders can create social</p></div>  {/* На случай, если текст слишком большой */}
                           <p><span>Type</span> Smart Contract</p>
                         </div>
                     </div>
@@ -124,8 +126,66 @@ export function YourCodeHere(){
                       </div>
 
                     </div> 
+                    <div className='Report__Modal-container__Main-fields-field Attachments '>
+
+                      <div className='Attachments__Title'>
+                        <p>Attachments  <span>(optional)</span></p>
+                      </div>
+
+                      <div className='Attachments__ChooseFile'>
+                        <div className='Attachments__ChooseFile__Icon'>
+                          <img src={Choose_File_Icon} alt="choose-file-icon" />
+                        </div>
+                        <p>Drag and drop files here or click to browse</p>
+                      </div>
+                      
+                      <div className='Attachments__Files'>
+
+                          <div className='Attachments__Files__File'>
+
+                            <div className='Attachments__Files__File__Name'>
+                                <div className='Attachments__Files__File__Name__Icon'>
+                                    <img src={Icon__File} alt="attachment-file-name-icon" />
+                                </div>
+                                <p>F1 screenshot.png</p>  {/* На случай, если текст слишком большой */}
+                            </div>
+
+                            <div className='Attachments__Files__File__Close'>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9998 6.94376L17.056 6L11.9996 11.0562L6.94397 6.00071L6.00016 6.94447L11.0558 11.9999L6 17.0555L6.94381 17.9993L11.9996 12.9437L17.0562 18L18 17.0562L12.9435 11.9999L17.9998 6.94376Z" fill="#F5F5F5"/>
+                              </svg>
+                            </div>
+
+                          </div>
+
+                          <div className='Attachments__Files__File'>
+
+                            <div className='Attachments__Files__File__Name'>
+                                <div className='Attachments__Files__File__Name__Icon'>
+                                    <img src={Icon__File} alt="attachment-file-name-icon" />
+                                </div>
+                                <p>F1 screenshot.png</p>
+                            </div>
+
+
+                            <div className='Attachments__Files__File__Close'>
+                              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9998 6.94376L17.056 6L11.9996 11.0562L6.94397 6.00071L6.00016 6.94447L11.0558 11.9999L6 17.0555L6.94381 17.9993L11.9996 12.9437L17.0562 18L18 17.0562L12.9435 11.9999L17.9998 6.94376Z" fill="#F5F5F5"/>
+                              </svg>
+                            </div>
+                            
+                          </div>
+
+                      </div>  
+
+                    </div>
 
                 </div>
+                <div className='Report__Modal-container__Main-buttons'>
+                    <button className="UIButton UIButton--green-outline">Save as draft</button>
+                    <button className="UIButton UIButton--green">Submit Report</button>
+                </div>
+
             </div>
 
           </div>

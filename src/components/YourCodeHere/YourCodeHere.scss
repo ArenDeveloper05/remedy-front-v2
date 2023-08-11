@@ -65,14 +65,23 @@
                 font-weight: 500;
                 line-height: 3.2rem;
               }
-              >p:first-of-type{
-                font-size: 1.6rem;
+              .Info-desc{
+                max-width: 50rem;
+                height: 2.4rem;
+                overflow: hidden;
                 margin-bottom: 2.4rem;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 2.4rem;
-                letter-spacing: 0.016rem;
-                }
+                >p{
+                  font-size: 1.6rem;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 2.4rem;
+                  letter-spacing: 0.016rem;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                  }
+              }
+              
               >p:last-child{
                 font-size: 1.4rem;
                 font-family:  var(--remedy-Global--font-text);
@@ -190,7 +199,6 @@
                 padding-top: 1.2rem;
                 .Report__Content__Area__Header-modes{
                   display: flex;
-                  // border: solid;//test
                   gap: 2.4rem;
                   
                   > .Report__Content__Area__Header-modes-mode{
@@ -229,8 +237,6 @@
           }
           .Additional-links{
             width: 100%;
-            min-height: 12rem;//test
-            // border: solid;//test
             .Additional-links__Title{
               >p{
                 font-size: 1.4rem;
@@ -247,7 +253,6 @@
             .Additional-links__Box{
               margin-top: .8rem;
               width: 100%;
-              // border: solid 1px;//test
               display: flex;
               justify-content: space-between;
               flex-wrap: wrap;
@@ -261,7 +266,6 @@
                   width: .1rem;
                   height: 4.4rem;
                   background-color: $remedy-Global--color-dark-2;
-                  // background-color: red;
                   left: 7.5rem;
                   top: 0;
                 }
@@ -291,7 +295,6 @@
                 width: 14.2rem;
                 height: 2.4rem;
                 cursor: pointer;
-                // border: solid; //test
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
@@ -308,8 +311,125 @@
 
 
           }
+          .Attachments{
+            margin-top: 4rem;
+            .Attachments__Title{
+              >p{
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2rem;
+                letter-spacing: 0.014rem;
+                color: $remedy-Global--color-white-2;
+                >span{
+                  color: #999999;
+                }
+              }
+            }
+            .Attachments__ChooseFile{
+              width: 100%;
+              height: 8.8rem;
+              background-color: $remedy-Global--color-dark-3;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding: 1.6rem 0;
+              cursor: pointer;
+              transition: 0.1s;
+              &:hover{
+                background-color: #383838;
+                
+              }
+              .Attachments__ChooseFile__Icon{
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-bottom: 1.2rem;
+                
+                >img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              >p{
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2rem; 
+                letter-spacing: 0.014rem;
+                color: #999999;
+              }
+            }
+            .Attachments__Files{
+              margin-top: .8rem;
+              .Attachments__Files__File{
+                width: 100%;
+                height: 3.2rem;
+                background-color: $remedy-Global--color-dark-3 ;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-grow: 1;
+                margin-bottom: .8rem;
+                padding-left: .8rem;
+                padding-top: .6rem;
+                padding-bottom: .6rem;
+                padding-right: .6rem;
+                .Attachments__Files__File__Name{
+                  display: flex;
+                  align-items: center;
+                  height: 100%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+
+                  
+                  .Attachments__Files__File__Name__Icon{
+                    width: 1.6rem;
+                    height: 1.6rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: .8rem;
+                  }
+                  >p{
+                    margin: 0;
+                  }
+          
+                }
+                .Attachments__Files__File__Close{
+                  width: 2.2rem;
+                  height: 2.2rem;
+                  cursor: pointer;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  &:hover > svg > path{
+                    fill: $remedy-Global--color-green;
+                  }
+                  
+                }
+              }
+            }
+          }
 
         }
+
+        &-buttons{
+          margin-top: 5.6rem;
+          display: flex;
+          justify-content: flex-end;
+          >button{
+            width: 15.4rem;
+            height: 4.4rem;
+          }
+          >button:last-child{
+            margin-left: .8rem;
+          }
+        }
+
+
+
 
       }
 
