@@ -1,17 +1,12 @@
-@import '../../styles/scss-variables';
-@import '../../styles/mixins';
+@import "../../styles/scss-variables";
+@import "../../styles/mixins";
 
-
-
-
-
-.Report__background{
+.ReportCreation {
   z-index: 999;
   width: 100%;
   height: 100%;
-  // min-height: 20rem;//test
   background-color: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(.6rem);
+  backdrop-filter: blur(0.6rem);
   padding-top: 6.4rem;
   padding-bottom: 20.9rem;
   position: fixed;
@@ -19,48 +14,46 @@
   left: 0;
   overflow: auto;
 
-  .Report__modal{
-    font-family:  var(--remedy-Global--font-text);
+  .ReportCreation__modal {
+    font-family: var(--remedy-Global--font-text);
     max-width: 118.4rem;
     margin: auto;
-    min-height: 130.5rem;//test
     display: flex;
     justify-content: space-between;
-    &__container{
+    .ReportCreation__modal__container {
       width: 113.2rem;
       min-height: 130.5rem;
       background-color: $remedy-Global--color-dark-2;
-      &__header{
+      .ReportCreation__modal__container__header {
         padding: 3.2rem;
         padding-top: 2.4rem;
-        // min-height: 2rem;//test
         border-bottom: 0.1rem solid $remedy-Global--color-dark-1;
-        >p{
-          color: #999999;
-          font-family: PP Neue Montreal;
+        .ReportCreation__modal__container__header__heading {
+          color: $remedy-Global--color-gray-light;
+          font-family: var(--remedy-Global--font-text);
           font-size: 1.6rem;
           font-weight: 500;
           font-style: normal;
           font-weight: 500;
-          line-height: 2.4rem; 
+          line-height: 2.4rem;
           letter-spacing: 0.016rem;
         }
-        &__content{
+        .ReportCreation__modal__container__header__content {
           width: 100%;
           height: 10.8rem;
           display: flex;
           justify-content: space-between;
           margin-top: 3.2rem;
-          &__description{
+          .ReportCreation__modal__container__header__content__description {
             display: flex;
-            &__logo{
+            .ReportCreation__modal__container__header__content__description__logo {
               margin-right: 2rem;
             }
-            &__info{
-              >h4{
+            .ReportCreation__modal__container__header__content__description__info {
+              &--title {
                 font-size: 2.4rem;
-                margin-bottom: .8rem;
-                font-family:  var(--remedy-Global--font-text);  
+                margin-bottom: 0.8rem;
+                font-family: var(--remedy-Global--font-text);
                 font-style: normal;
                 font-weight: 500;
                 line-height: 3.2rem;
@@ -69,12 +62,12 @@
                 text-overflow: ellipsis;
                 white-space: nowrap;
               }
-              &__desc{
+              &--desc {
                 max-width: 50rem;
                 height: 2.4rem;
                 overflow: hidden;
                 margin-bottom: 2.4rem;
-                >p{
+                &--text {
                   font-size: 1.6rem;
                   font-style: normal;
                   font-weight: 500;
@@ -83,117 +76,93 @@
                   overflow: hidden;
                   white-space: nowrap;
                   text-overflow: ellipsis;
-                  }
+                }
               }
-              
-              >p:last-child{
+
+              &--type {
                 font-size: 1.4rem;
-                font-family:  var(--remedy-Global--font-text);
+                font-family: var(--remedy-Global--font-text);
                 font-style: normal;
                 font-weight: 500;
                 line-height: 2rem;
-                // letter-spacing: 0.014rem;
-                >span{
-                   color: #999999;
-                   font-family:  var(--remedy-Global--font-text);
-                   font-size: 1.4rem;
-                   font-style: normal;
-                   font-weight: 500;
-                   line-height: 2rem; 
-                   letter-spacing: 0.014rem;
-                   font-weight: 500;
-                   margin-right: .8rem;
+                &--small {
+                  color: $remedy-Global--color-gray-light;
+                  font-family: var(--remedy-Global--font-text);
+                  font-size: 1.4rem;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 2rem;
+                  letter-spacing: 0.014rem;
+                  font-weight: 500;
+                  margin-right: 0.8rem;
                 }
               }
             }
           }
 
-
-          &__buttons{
-            >button{
+          .ReportCreation__modal__container__header__content__buttons {
+            .ReportCreation__modal__container__header__content__buttons__button {
               width: 15.4rem;
               height: 4.4rem;
-            }
-            >button:last-child{
-              margin-left: .8rem;
+              &--submit {
+                margin-left: 0.8rem;
+              }
             }
           }
         }
       }
-      &__main{
+      .ReportCreation__modal__container__main {
         padding: 3.2rem;
-        &__fields{
+        .ReportCreation__modal__container__main__fields {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          .Field__error{
-            >p:first-child{
-              color: $remedy-Global--color-error-red;
-            }
-            >p:last-child{
-              font-weight: 500;
-              font-size: 1.2rem;
-              margin-top: .4rem;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 1.6rem;
-              letter-spacing: 0.012rem;
-            }
-            >div, input{
-              border: solid 0.1rem $remedy-Global--color-error-red;
-            }
-          }
-          &__field{
+          .ReportCreation__modal__container__main__fields__field {
             width: 52.4rem;
-            >p:first-child{
+            margin-bottom: 3.2rem;
+            &--title {
               font-size: 1.4rem;
               font-style: normal;
               font-weight: 500;
-              line-height: 2rem; 
+              line-height: 2rem;
               letter-spacing: 0.014rem;
+              display: flex;
+              justify-content: space-between;
+              &--small--count {
+                color: $remedy-Global--color-gray-light;
+              }
             }
-            >div{
+            &--subject {
               width: 100%;
             }
-            >input{
-              width: 100%
-            }
-            
-          }
-          .Report__title__input{
-            margin-top: 3.2rem;
-            >p{
-              display: flex;
-              justify-content: space-between;
-              font-size: 1.4rem;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 2rem; 
-              letter-spacing: 0.014rem;
-              >span:last-child{
-               color: #999999  
+            //Error for fields
+            &--error {
+              .ReportCreation__modal__container__main__fields__field--title {
+                color: $remedy-Global--color-error-red;
+              }
+              .ReportCreation__modal__container__main__fields__field--subject {
+                border: solid 0.1rem $remedy-Global--color-error-red;
+              }
+              &--message {
+                font-weight: 500;
+                font-size: 1.2rem;
+                margin: 0;
+                margin-top: 0.4rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.6rem;
+                letter-spacing: 0.012rem;
+                position: absolute;
               }
             }
-            
+            //Error for fields
           }
-          .Report__content__field{
+          .ReportCreation__modal__container__main__fields__field--markdown {
             width: 100%;
-            >p{
-              display: flex;
-              justify-content: space-between;
-              font-size: 1.4rem;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 2rem; 
-              letter-spacing: 0.014rem;
-              >span:last-child{
-               color: #999999  
-              }
-            }
-            >.Report__content__area{
+            .ReportCreation__modal__container__main__fields__field--markdown__area {
               height: 38.4rem;
               background-color: $remedy-Global--color-dark-3;
-              .Report__content__area__header{
+              .ReportCreation__modal__container__main__fields__field--markdown__area__header {
                 width: 100%;
                 height: 4.4rem;
                 border-bottom: 0.1rem solid $remedy-Global--color-dark-1;
@@ -201,136 +170,131 @@
                 justify-content: space-between;
                 padding: 0 1.6rem;
                 padding-top: 1.2rem;
-                .Report__content__area__header__modes{
+                .ReportCreation__modal__container__main__fields__field--markdown__area__header__modes {
                   display: flex;
                   gap: 2.4rem;
-                  
-                  > .Report__content__area__header__modes__mode{
-                    >span{
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__header__modes__mode {
+                    cursor: pointer;
+                    &--text {
                       font-size: 1.6rem;
                       font-style: normal;
                       font-weight: 500;
-                      line-height: 2.4rem; 
+                      line-height: 2.4rem;
                       letter-spacing: 0.016rem;
                     }
-                  }
-                  .Active--Markdown--Mode{
-                    border-bottom: 0.2rem solid $remedy-Global--color-green;
-
-                    >span{
-                      color: $remedy-Global--color-green;
+                    &--active {
+                      border-bottom: 0.2rem solid $remedy-Global--color-green;
+                      .ReportCreation__modal__container__main__fields__field--markdown__area__header__modes__mode--text {
+                        color: $remedy-Global--color-green;
+                      }
                     }
                   }
                 }
 
-                .Report__content__area__header__info{
-                  color: #999999;
+                .ReportCreation__modal__container__main__fields__field--markdown__area__header__info {
+                  color: $remedy-Global--color-gray-light;
                   font-size: 1.4rem;
                   font-style: normal;
                   font-weight: 500;
                   line-height: 2rem;
                   letter-spacing: 0.014rem;
-                } 
-
+                }
               }
-              &__content{
+              .ReportCreation__modal__container__main__fields__field--markdown__area__content {
 
               }
             }
-            
           }
-          .AdditionalLinks{
+          .ReportCreation__modal__container__main__fields__field--links {
             width: 100%;
-            .AdditionalLinks__title{
-              >p{
+            margin-bottom: 0;
+            .ReportCreation__modal__container__main__fields__field--links__title {
+              &--text {
                 font-size: 1.4rem;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 2rem;
                 letter-spacing: 0.014rem;
                 color: $remedy-Global--color-white-2;
-                >span{
-                  color: #999999;
+                &--small{
+                  color: $remedy-Global--color-gray-light;
                 }
               }
             }
-            .AdditionalLinks__box{
-              margin-top: .8rem;
+            .ReportCreation__modal__container__main__fields__field--links__box {
+              margin-top: 0.8rem;
               width: 100%;
               display: flex;
               justify-content: space-between;
               flex-wrap: wrap;
-              .AdditionalLinks__box__item{
-                
-                margin-bottom: 2.4rem;
+              .ReportCreation__modal__container__main__fields__field--links__box__item {
+                margin-bottom: 2rem;
                 position: relative;
-                &::before{
+                &::before {
                   content: "";
                   position: absolute;
-                  width: .1rem;
+                  width: 0.1rem;
                   height: 4.4rem;
                   background-color: $remedy-Global--color-dark-2;
                   left: 7.5rem;
                   top: 0;
                 }
-                
-                >input{
+                &--input {
                   width: 52.4rem;
                   height: 4.4rem;
                 }
+                //Error for additional links
+                &--error {
+                  .ReportCreation__modal__container__main__fields__field--links__box__item--input {
+                    border: solid 0.1rem $remedy-Global--color-error-red;
+                  }
+                  &--message {
+                    font-size: 1.2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 1.6rem;
+                    letter-spacing: 0.012rem;
+                    color: $remedy-Global--color-white-2;
+                    margin: 0;
+                  }
+                }
+                //Error for additional links
               }
-              .Additional--Link--Error{
-                >input{
-                  border: solid 0.1rem $remedy-Global--color-error-red;
-                }
-                .Additional--Link--Error--message{
-                  font-size: 1.2rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 1.6rem; 
-                  letter-spacing: 0.012rem;
-                  color: $remedy-Global--color-white-2
-                }
-               
+            }
+            .ReportCreation__modal__container__main__fields__field--links__addurl {
+              width: 14.2rem;
+              height: 2.4rem;
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              &--text{
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 2.4rem;
+                letter-spacing: 0.016rem;
+                color: $remedy-Global--color-green;
               }
-
             }
-            .AdditionalLinks__addUrl{
-                width: 14.2rem;
-                height: 2.4rem;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                >span{
-                  font-size: 1.6rem;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 2.4rem; 
-                  letter-spacing: 0.016rem;
-                  color: $remedy-Global--color-green;
-                }
-      
-            }
-
-
           }
-          .Attachments{
+          .ReportCreation__modal__container__main__fields__field--attachments {
             margin-top: 4rem;
-            .Attachments__title{
-              >p{
+            margin-bottom: 0;
+            .ReportCreation__modal__container__main__fields__field--attachments__title {
+              &--text{
                 font-size: 1.4rem;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 2rem;
                 letter-spacing: 0.014rem;
                 color: $remedy-Global--color-white-2;
-                >span{
-                  color: #999999;
+                &--small{
+                  color: $remedy-Global--color-gray-light;
                 }
               }
             }
-            .Attachments__chooseFile{
+            .ReportCreation__modal__container__main__fields__field--attachments__choosefile {
               width: 100%;
               height: 8.8rem;
               background-color: $remedy-Global--color-dark-3;
@@ -340,105 +304,100 @@
               padding: 1.6rem 0;
               cursor: pointer;
               transition: 0.1s;
-              &:hover{
+              &:hover {
                 background-color: #383838;
-                
               }
-              .Attachments__chooseFile__icon{
+              .ReportCreation__modal__container__main__fields__field--attachments__choosefile--icon {
                 width: 1.6rem;
                 height: 1.6rem;
                 margin-bottom: 1.2rem;
-                
-                >img{
+                &--img{
                   width: 100%;
                   height: 100%;
                   object-fit: cover;
                 }
               }
-              >p{
+              &--text{
                 font-size: 1.4rem;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 2rem; 
+                line-height: 2rem;
                 letter-spacing: 0.014rem;
-                color: #999999;
+                color: $remedy-Global--color-gray-light;
               }
             }
-            .Attachments__files{
-              margin-top: .8rem;
-              .Attachments__files__file{
+            .ReportCreation__modal__container__main__fields__field--attachments__files {
+              margin-top: 0.8rem;
+              .ReportCreation__modal__container__main__fields__field--attachments__files__file {
                 width: 100%;
                 height: 3.2rem;
-                background-color: $remedy-Global--color-dark-3 ;
+                background-color: $remedy-Global--color-dark-3;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
                 flex-grow: 1;
-                margin-bottom: .8rem;
-                padding-left: .8rem;
-                padding-top: .6rem;
-                padding-bottom: .6rem;
-                padding-right: .6rem;
-                .Attachments__files__file__name{
+                margin-bottom: 0.8rem;
+                padding-left: 0.8rem;
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
+                padding-right: 0.6rem;
+                .ReportCreation__modal__container__main__fields__field--attachments__files__file__name {
                   display: flex;
                   align-items: center;
                   height: 100%;
                   overflow: hidden;
                   text-overflow: ellipsis;
                   white-space: nowrap;
-
-                  
-                  .Attachments__files__file__name__icon{
+                  .ReportCreation__modal__container__main__fields__field--attachments__files__file__name--icon {
                     width: 1.6rem;
                     height: 1.6rem;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-right: .8rem;
+                    margin-right: 0.8rem;
                   }
-                  >p{
+                  &--text{
                     margin: 0;
                   }
-          
                 }
-                .Attachments__files__file__close{
+                .ReportCreation__modal__container__main__fields__field--attachments__files__file__close {
                   width: 2.2rem;
                   height: 2.2rem;
                   cursor: pointer;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  &:hover > svg > path{
-                    fill: $remedy-Global--color-green;
-                  }
-                  
+                    .ReportCreation__modal__container__main__fields__field--attachments__files__file__close--hovered {
+                      display: none;
+                    }
+                    &:hover .ReportCreation__modal__container__main__fields__field--attachments__files__file__close--icon {
+                      display: none;
+                    }
+                    &:hover .ReportCreation__modal__container__main__fields__field--attachments__files__file__close--hovered{
+                      display: block;
+                    }
                 }
               }
             }
           }
-
         }
 
-        &-buttons{
+        .ReportCreation__modal__container__main__buttons {
           margin-top: 5.6rem;
           display: flex;
           justify-content: flex-end;
-          >button{
+          .ReportCreation__modal__container__main__buttons__button {
             width: 15.4rem;
             height: 4.4rem;
+            &--submit{
+              margin-left: 0.8rem;
+            }
           }
-          >button:last-child{
-            margin-left: .8rem;
-          }
+         
         }
-
-
-
-
       }
-
     }
-    &-close{
+    .ReportCreation__modal__close {
       width: 3.2rem;
       height: 3.2rem;
       background-color: $remedy-Global--color-dark-2;
@@ -446,26 +405,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      &-img{
-        width: 2.4rem;
-        height: 2.4rem;
-        >img{
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      }
     }
   }
-
 }
 
-
 /* ПИШИТЕ ВАШ КОД ЗДЕСЬ */
-
-
-
-
 
 .Test {
   padding: 50px;
@@ -484,7 +428,8 @@
   }
 }
 
-.Test__fonts {}
+.Test__fonts {
+}
 
 .Test__fonts-item {
   margin-bottom: 1rem;
@@ -522,10 +467,22 @@
   margin-left: 1rem;
   box-shadow: inset 0 0 0 1px rgba($remedy-Global--color-white, 0.5);
 
-  &--white { background: $remedy-Global--color-white; }
-  &--gray { background: $remedy-Global--color-gray; }
-  &--dark-1 { background: $remedy-Global--color-dark-1; }
-  &--dark-2 { background: $remedy-Global--color-dark-2; }
-  &--dark-3 { background: $remedy-Global--color-dark-3; }
-  &--green { background: $remedy-Global--color-green; }
+  &--white {
+    background: $remedy-Global--color-white;
+  }
+  &--gray {
+    background: $remedy-Global--color-gray;
+  }
+  &--dark-1 {
+    background: $remedy-Global--color-dark-1;
+  }
+  &--dark-2 {
+    background: $remedy-Global--color-dark-2;
+  }
+  &--dark-3 {
+    background: $remedy-Global--color-dark-3;
+  }
+  &--green {
+    background: $remedy-Global--color-green;
+  }
 }
