@@ -162,6 +162,8 @@
             .ReportCreation__modal__container__main__fields__field--markdown__area {
               height: 38.4rem;
               background-color: $remedy-Global--color-dark-3;
+              display: flex;
+              flex-direction: column;
               .ReportCreation__modal__container__main__fields__field--markdown__area__header {
                 width: 100%;
                 height: 4.4rem;
@@ -190,7 +192,6 @@
                     }
                   }
                 }
-
                 .ReportCreation__modal__container__main__fields__field--markdown__area__header__info {
                   color: $remedy-Global--color-gray-light;
                   font-size: 1.4rem;
@@ -201,8 +202,171 @@
                 }
               }
               .ReportCreation__modal__container__main__fields__field--markdown__area__content {
-
-              }
+                flex-grow: 1;
+                padding-left: 1.6rem;
+                padding-top: 1.6rem;
+                // Write mode
+                .ReportCreation__modal__container__main__fields__field--markdown__area__content--write{
+                  display: flex;
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines{
+                    width: 3.6rem; 
+                    margin-right: 2.4rem;
+                    .ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line{
+                      .ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text{
+                        margin: 0;
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140%;
+                        text-align: end;
+                        font-family: serif;//test
+                        color: $remedy-Global--color-gray-light;
+                      }
+                    }
+                  }
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__content--write--writable{
+                    flex-grow:1;
+                    ::-webkit-scrollbar {
+                      width: .4rem;
+                      cursor: pointer;
+                    }
+                    ::-webkit-scrollbar-track {
+                      background: $remedy-Global--color-dark-3; 
+                    }
+                    ::-webkit-scrollbar-thumb {
+                      background:$remedy-Global--color-dark-1;
+                    }
+                    .ReportCreation__modal__container__main__fields__field--markdown__area__content--write--writable--textarea{
+                      width: 100%;
+                      height: 100%;
+                      background: transparent;
+                      border: none;
+                      outline: none;
+                      color: $remedy-Global--color-gray-light;
+                      font-size: 1.4rem;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
+                      font-family: "Monaco", "Consolas", "Courier New", "Inconsolata", "Source Code Pro", monospace; //test
+                      resize: none;
+                    }
+                  }
+                }
+                
+                // Preview mode
+                .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview{
+                  width: 100%;
+                  height: 100%;
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--title{
+                    font-family: var(--remedy-Global--font-text);
+                    color: $remedy-Global--color-white-2;
+                    font-size: 2rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 2.8rem; 
+                    margin-bottom: 1.2rem;
+                  }
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--description{
+                    font-size: 1.6rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 2.4rem;
+                    letter-spacing: 0.016rem;
+                    margin-bottom: 2.4rem;
+                    color: $remedy-Global--color-white-2;
+                  }
+                  .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact{
+                    .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--title{
+                      font-size: 2rem;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 2.8rem;
+                      margin: 0;
+                      margin-bottom: 1.2rem;
+                    }
+                    .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container{
+                      width: 73.6rem;
+                      background: #383838;
+                      .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header{
+                        height: 4rem;
+                        border-bottom: 0.2rem solid $remedy-Global--color-gray-light;
+                        padding: .8rem;
+                        padding-left: 1.6rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title{
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title--name{
+                            margin-right: .8rem;
+                            font-size: 1.4rem;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 2rem;
+                          }
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title--bytes{
+                            font-size: 1.4rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 2rem;
+                            color: $remedy-Global--color-gray-light;
+                          }
+                        }
+                        .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons{
+                          display: flex;
+                          gap: .8rem;
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons--copy{
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            background-image: url(../../assets/images/icon-copy.svg);
+                            cursor: pointer;
+                          }
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons--share{
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            background-image: url(../../assets/images/icon-share.svg);
+                            cursor: pointer;
+                          }
+                        }
+                      }
+                      .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main{
+                        padding: 1.6rem;
+                        padding-bottom: 0;
+                        display: flex;
+                        .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines{
+                          width: 3.6rem;
+                          margin-right: 2.4rem;
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line{
+                            .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number{
+                              font-family: "Monaco", "Consolas", "Courier New", "Inconsolata", "Source Code Pro", monospace; //test
+                              text-align: end;
+                              font-size: 1.4rem;
+                              font-style: normal;
+                              font-weight: 400;
+                              line-height: 140%;
+                              color: $remedy-Global--color-gray-light;
+                              margin: 0;
+                            }
+                          }
+                        }
+                        .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code{
+                          flex: 1;
+                          .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text{
+                            margin: 0;
+                            font-size: 1.4rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 2rem;
+                            color: $remedy-Global--color-white-2;
+                            .ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value{
+                              color: #62B2F5;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              } 
             }
           }
           .ReportCreation__modal__container__main__fields__field--links {

@@ -124,7 +124,150 @@ export function YourCodeHere() {
                         <span>How to use markdown</span>
                       </div>
                     </div>
-                    <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content"></div>
+                    <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content">
+                      {/* Write Mode */}
+                      {/* <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write">
+                        <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines">
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">1</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">2</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">3</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">4</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">5</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">6</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">7</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">8</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">9</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">10</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">11</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">12</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">13</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">14</p>
+                          </div>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line">
+                            <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--lines--line--text">15</p>
+                          </div>
+                        </div>
+                        <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--writable">
+                          <textarea className="ReportCreation__modal__container__main__fields__field--markdown__area__content--write--writable--textarea">## Bug Description&#13;A clear and concise description of the bug.&#13;&#13;## Impact&#13;&#13;## Risk Breakdown&#13;Difficulty to Exploit: Easy&#13;Weakness:&#13;CVSS2 Score:&#13;&#13;## Recommendation&#13;&#13;## References&#13;&#13;## Proof Of Concept</textarea>
+                        </div>
+                      </div>  */}
+                      {/* Write Mode */}
+                      {/* Preview Mode */}
+                      <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview">
+                        <h1 className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--title">Bug Description</h1>
+                        <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--description">A clear and concise description of the bug.</p>
+                        <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact">
+                          <h2 className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--title">Impact</h2>
+                          <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container">
+                            <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header">
+                              <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title">
+                                <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title--name">
+                                  Code
+                                </span>
+                                <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--title--bytes">
+                                  31  Bytes
+                                </span>
+                              </div>
+                              <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons">
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons--copy"></div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__header--icons--share"></div>
+                              </div>
+                            </div>
+                            <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main">
+                              <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines">
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">1</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">2</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">3</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">4</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">5</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">6</p>
+                                </div>
+                                <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--lines--line--number">7</p>
+                                </div>
+                              </div>
+                              <div className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code">
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    border-box
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    Layout
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    display:{" "}
+                                    <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value">
+                                      flex;
+                                    </span>
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    padding:{" "}
+                                    <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value">
+                                      8px 16px;
+                                    </span>
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    align-items:{" "}
+                                    <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value">
+                                      center;
+                                    </span>
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    gap:{" "}
+                                    <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value">
+                                      8px;
+                                    </span>
+                                  </p>
+                                  <p className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text">
+                                    align-self:{" "}
+                                    <span className="ReportCreation__modal__container__main__fields__field--markdown__area__content--preview--impact--container__main--code--text--value">
+                                      stretch;
+                                    </span>
+                                  </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>  
+                      {/* Preview Mode */} 
+                    </div>
                   </div>
                   <p className="ReportCreation__modal__container__main__fields__field--error--message">You have reached the character limit</p>
                 </div>
