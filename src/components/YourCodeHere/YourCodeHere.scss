@@ -522,12 +522,13 @@
 }
 
 .ReportCreation__main-links-add {
-  width: 14.2rem;
   height: 2.4rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: transparent;
+  border: none;
 }
 
 .ReportCreation__main-links-add-icon {

@@ -391,12 +391,12 @@ export function YourCodeHere() {
                   />
                 </div>
               </div>
-              <div className="ReportCreation__main-links-add">
+              <button className="ReportCreation__main-links-add">
                 <div className="ReportCreation__main-links-add-icon"></div>
                 <span className="ReportCreation__main-links-add-description">
                   Add another URL
                 </span>
-              </div>
+              </button>
             </div>
             <div className="ReportCreation__main-attachments">
               <div className="ReportCreation__main-attachments-label">
@@ -442,14 +442,14 @@ export function YourCodeHere() {
                 </div>
               </div>
             </div>
-            <btton className="d-flex justify-content-end">
+            <div className="d-flex justify-content-end">
               <button className="UIButton UIButton--green-outline ReportCreation__draft">
                 Save as draft
               </button>
               <button className="UIButton UIButton--green ReportCreation__submit">
                 Submit Report
               </button>
-            </btton>
+            </div>
           </div>
         </div>
       </div>
