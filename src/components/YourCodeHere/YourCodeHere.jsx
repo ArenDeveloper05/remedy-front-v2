@@ -248,53 +248,6 @@ export function YourCodeHere() {
                 <div className="ReportCreation__main-markdown-body">
                   {writeMode ? (
                     <div className="ReportCreation__main-markdown-body-write">
-                      <div className="ReportCreation__main-markdown-body-write-lines">
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          1
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          2
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          3
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          4
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          5
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          6
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          7
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          8
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          9
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          10
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          11
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          12
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          13
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          14
-                        </div>
-                        <div className="ReportCreation__main-markdown-body-write-lines-number">
-                          15
-                        </div>
-                      </div>
                       <textarea className="ReportCreation__main-markdown-body-write-textarea">
                         ## Bug Description&#13;A clear and concise description
                         of the bug.&#13;&#13;## Impact&#13;&#13;## Risk
@@ -412,14 +365,14 @@ export function YourCodeHere() {
                   <input
                     className="UIInput ReportCreation__main-links-field"
                     type="text"
-                    placeholder="http://         Enter an additional link"
+                    placeholder="Enter an additional link"
                   />
                 </div>
                 <div className="ReportCreation__main-links-item Error">
                   <input
                     className="UIInput ReportCreation__main-links-field Error-field"
                     type="text"
-                    placeholder="http://         Enter an additional link"
+                    placeholder="Enter an additional link"
                   />
                   <p className="Error-message">Please enter a valid URL</p>
                 </div>
@@ -427,14 +380,14 @@ export function YourCodeHere() {
                   <input
                     className="UIInput ReportCreation__main-links-field"
                     type="text"
-                    placeholder="http://         Enter an additional link"
+                    placeholder="Enter an additional link"
                   />
                 </div>
                 <div className="ReportCreation__main-links-item">
                   <input
                     className="UIInput ReportCreation__main-links-field"
                     type="text"
-                    placeholder="http://         Enter an additional link"
+                    placeholder="Enter an additional link"
                   />
                 </div>
               </div>
@@ -489,14 +442,14 @@ export function YourCodeHere() {
                 </div>
               </div>
             </div>
-            <div className="d-flex justify-content-end">
+            <btton className="d-flex justify-content-end">
               <button className="UIButton UIButton--green-outline ReportCreation__draft">
                 Save as draft
               </button>
               <button className="UIButton UIButton--green ReportCreation__submit">
                 Submit Report
               </button>
-            </div>
+            </btton>
           </div>
         </div>
       </div>

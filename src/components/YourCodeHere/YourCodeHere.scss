@@ -505,17 +505,6 @@
 .ReportCreation__main-links-item {
   width: 52.4rem;
   margin-bottom: 2rem;
-  position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    width: 0.1rem;
-    height: 4.4rem;
-    background-color: $remedy-Global--color-dark-2;
-    left: 7.5rem;
-    top: 0;
-  }
-
   @include remedy-media-query(lg, xl) {
     width: 50rem;
   }
